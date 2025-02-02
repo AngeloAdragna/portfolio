@@ -48,20 +48,20 @@ function Contact() {
                 <ul id='divContact'>
                     <li className='titleListContact'>Social network</li>
                     <li style={{ transform: `translateY(${progress * 5}em)`, opacity: progress }} className='elemListContact'><a href={github.html_url} target="_blank" rel="noopener noreferrer">
-                        <FiGithub /> Github</a></li>
+                        <FiGithub className='iconContactPage' /> Github</a></li>
                     <li style={{ transform: `translateY(${progress * 5}em)`, opacity: progress }} className='elemListContact'>
                         <a href={`https://www.linkedin.com/in/${linkedinUsr}/`} target="_blank" rel="noopener noreferrer">
-                            <CiLinkedin /> LinkedIn</a>
+                            <CiLinkedin className='iconContactPage' /> LinkedIn</a>
                     </li>
                     <li className='titleListContact'>Professional</li>
                     <li
                         style={{ transform: `translateY(${progress * 5}em)`, opacity: progress }}
                         className="elemListContact">
-                        <a href="mailto:adragna.yaya@gmail.com" target="_blank">
-                            <IoMailOutline /> adragna.yaya@gmail.com
+                        <a href="mailto:angelo.adragnadev@gmail.com" target="_blank">
+                            <IoMailOutline className='iconContactPage' /> angelo.adragnadev@gmail.com
                         </a>
                     </li>
-                    <li style={{ transform: `translateY(${progress * 5}em)`, opacity: progress }} className='elemListContact'><a href="/CV_Angelo_Adragna_2024.pdf" download="CV_Angelo_Adragna_2024.pdf"><SiReaddotcv /> Curriculum vitae</a></li>
+                    <li style={{ transform: `translateY(${progress * 5}em)`, opacity: progress }} className='elemListContact'><a href="/CV_Angelo_Adragna_2024.pdf" download="CV_Angelo_Adragna_2024.pdf"><SiReaddotcv className='iconContactPage' /> Curriculum vitae</a></li>
                 </ul>
 
 

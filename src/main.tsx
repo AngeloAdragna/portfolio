@@ -6,5 +6,6 @@ console.log('main.tsx is running');
 console.log(document.getElementById('root'));
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <App />
   </React.StrictMode>
 );

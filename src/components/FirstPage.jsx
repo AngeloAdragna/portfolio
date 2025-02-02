@@ -45,32 +45,32 @@ function FirstPage() {
                 <section className={`bar ${isCollapsed ? 'collapsed' : ''}`}>
                     <ul className={`list_bar ${isCollapsed ? 'collapsed' : ''}`}>
                         <li className="linkicone">
-                            <Link to="firstPage" smooth={true} duration={2000}>
+                            <Link to="firstPage" smooth={true} duration={1000}>
                                 <HiOutlineHome />
                             </Link>
                         </li>
                         <li className="linkicone">
-                            <Link to="about" smooth={true} duration={2000}>
+                            <Link to="about" smooth={true} duration={1000}>
                                 <GoPerson />
                             </Link>
                         </li>
                         <li className="linkicone">
-                            <Link to="SkillPage" smooth={true} duration={2000}>
+                            <Link to="SkillPage" smooth={true} duration={1000}>
                                 <GiHistogram />
                             </Link>
                         </li>
                         <li className="linkicone">
-                            <Link to="formation" smooth={true} duration={2000}>
+                            <Link to="formation" smooth={true} duration={1000}>
                                 <IoSchoolOutline />
                             </Link>
                         </li>
                         <li className="linkicone">
-                            <Link to="projet" smooth={true} duration={2000}>
+                            <Link to="projet" smooth={true} duration={1000}>
                                 <FiGithub />
                             </Link>
                         </li>
                         <li className="linkicone">
-                            <Link to="contact" smooth={true} duration={2000}>
+                            <Link to="contact" smooth={true} duration={1000}>
                                 <IoMailOutline />
                             </Link>
                         </li>

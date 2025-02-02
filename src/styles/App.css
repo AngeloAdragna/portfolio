@@ -1,9 +1,10 @@
 @import '../styles/boska.css';
 @import '../styles/clashgrotesk.css';
 
+
 :root {
   --color-purple-light: #8285D8;
-  --color-purple: #7A277D;
+  --color-purple: #8A077A;
   --color-purple-dark: #5E609C;
 
   --color-blue-light: #7EA8A6;
