@@ -76,3 +76,4 @@ https://portfolio-angelo-adragna-dev.vercel.app/
 
 ## Limites
 1. Adapté uniquement aux format PC. Le site n'est pas encore résponsive.
+2. Readme incomplet : Peu de détails sur les browsers supportés, le contenu des fichers...
