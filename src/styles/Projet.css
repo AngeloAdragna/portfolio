@@ -1,0 +1,109 @@
+.projet {
+  background-color: var(--color-blue);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  border-top: 1px solid var(--color-purple);
+  box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+#titleProjectPage{
+  margin-top: -14vh;
+  margin-bottom: 17vh;
+}
+
+#titleProjectPage::after {
+	content: '';
+	position: absolute;
+	bottom: 0vw;
+	left: 0.6vw;
+	width: 0;
+	height: 5.5px;
+  background: linear-gradient(45deg, var(--color-grey-xxx-light), var(--color-grey-x-light), var( --color-grey-light)); /* Utilise la couleur du texte */
+  transition: width 0.5s ease-out;
+}
+  
+#titleProjectPage:hover::after {
+	width: 8vw;
+}
+
+.caroussel{
+  width: 80vw;
+  height: max-content;
+}
+
+.card {
+  height: 50vh;
+  background-color: var(--color-grey-xx-light);
+  border-width: 10px;
+  border-style: solid;
+  border-image: linear-gradient(var(--color-grey) 20%, var(--color-grey-base) 50%, var(--color-grey-dark) 90%) 1;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+}
+
+.titleCard {
+  font-size: 2.0em;
+  font-weight: bold;
+  color: var(--color-grey-x-dark);
+  padding: 0 5px 10px 0;
+  text-align: right;
+  border-bottom: 10px solid var(--color-grey-base);
+}
+
+.textCard {
+  font-size: 1.8em;
+  color: var(--color-grey-dark);
+  text-align: center;
+  padding: 25px;
+  font-family: 'ClashGrotesk-Regular', 'Boska-Medium', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+ 
+}
+
+
+.slick-slide > div {
+  margin: 10px;
+}
+
+.slick-prev, .slick-next {
+  scale: 3;
+}
+
+.slick-next:before {
+  content: '🡒';
+  padding-left: 3px;
+}
+
+.slick-prev:before {
+  content: '🡐';
+  padding-right: 30px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    background-color: var(--color-blue);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    color: var(--color-grey-xxxx-light);
+    transform: translateX(-50%);
+  }
+  
+.btn:hover {
+  color: white;
+  filter: brightness(1.1);
+}

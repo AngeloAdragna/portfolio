@@ -1,0 +1,222 @@
+@import '../styles/boska.css';
+@import '../styles/clashgrotesk.css';
+
+:root {
+  --color-purple-light: #8285D8;
+  --color-purple: #7A277D;
+  --color-purple-dark: #5E609C;
+
+  --color-blue-light: #7EA8A6;
+  --color-blue: #277D7A;
+
+  --color-green-light: #43C971;
+  --color-green: #2F9051;
+
+  --color-pink-light: #FF7F50;
+  --color-pink: #CC6540;
+
+  --color-grey-xxxx-light: #D7D7BF;
+  --color-grey-xxx-light: #BAB88E;
+  --color-grey-xx-light: #B3B182;
+  --color-grey-x-light: #AAA772;
+  --color-grey-light: #A19E63;
+  --color-grey: #8A873C;
+  --color-grey-base: #7D7A27;
+  --color-grey-dark: #64611F;
+  --color-grey-x-dark: #464315;
+  --color-grey-xx-dark: #3F3C12;
+  
+	--t1: all 0.5s ease 0s;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+	content: "";
+}
+
+
+body {
+  margin: 0;
+  font-family: 'ClashGrotesk-Regular', 'Boska-Medium', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+}
+
+
+.TitlePage{
+  color: var(--color-grey-xxxx-light);
+  filter: brightness(1.1);
+  font-family:  'Boska-Bold', 'ClashGrotesk-Regular',Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  underline: solid;
+  margin-top: -1vw;
+  margin-bottom: 1.5em;
+  text-shadow: -3px 4px 8px rgba(0, 0, 0, 1);
+  padding-left: 0.3em;
+}
+
+.container{
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeInEffect 1s ease-in-out forwards;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden-content {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+
+/** Reglage de la bar **/
+.bar {
+  position: fixed;
+  z-index: 10;
+  top: 6vh;
+  left: 0;
+  width: 28.8vw;
+  font-size: calc(7px + 2vmin);
+  box-shadow: 3px 4px 5px var( --color-grey-xx-dark);
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  animation: gradient-animation 10s ease infinite;
+}
+/* bar ouverte */
+.bar:not(.collapsed) {
+ display: flex;
+ align-items: center;
+ justify-content: right;
+ transform: translateX(0);
+ animation: slide-out 0.5s ease-in-out, gradient-animation 10s ease infinite;
+ background: linear-gradient(45deg, var(--color-grey-x-dark), var(  --color-grey-base), var( --color-grey-light)); 
+ background-size: 250% 250%;
+}
+/* bar fermé */
+.bar.collapsed {
+ display: flex;
+ align-items: center;
+ justify-content: right;
+ transform: translateX(-23.8vw);
+ animation: slide-in 0.5s ease-in-out, gradient-animation 10s ease infinite;
+ background: linear-gradient(45deg, var(--color-grey-x-dark), var(  --color-grey-base), var( --color-grey-light));
+ background-size: 250% 250%;
+}
+
+/* Animation ouverture */
+@keyframes slide-out {
+ from {
+   transform: translateX(-23.8vw);
+ }
+ to {
+   transform: translateX(0);
+ }
+}
+
+/* Animation fermeture */
+@keyframes slide-in {
+ from {
+   transform: translateX(0);
+ }
+ to {
+   transform: translateX(-23.8vw);
+ }
+}
+
+/* Animation du dégradé */
+@keyframes gradient-animation {
+ 0% {
+   background-position: 0% 50%;
+ }
+ 50% {
+   background-position: 100% 50%;
+ }
+ 100% {
+   background-position: 0% 50%;
+ }
+}
+
+/** Bar content **/
+.list_bar{
+  scale: 1.1;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  list-style-type: none;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  gap: 1.8vw;
+  margin: 1.2em 0 0.8em 0; 
+ }
+ 
+.list_bar * {
+ color: var(  --color-grey-xxxx-light);
+}
+/* collapse */
+.list_bar.collapsed li:not(.arrow-icon) {
+  display: none;
+}
+
+.list_bar .linkicone:hover {
+ cursor: pointer; /* Change cursor to pointer on hover */
+ animation: shake 0.75s ease-in-out; /* Infinite shake animation */
+}
+
+.arrow-icon.rotated {
+  display: block;
+  transform: translateY(-30%) translateX(-25%) rotate(180deg) scale(1.4) ;
+  padding: 0em;
+  margin: 0em -1em 0em -1em;
+}
+
+.arrow-icon.rotated:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  animation: reverse-shake 0.75s ease-in-out; /* Infinite shake animation */
+}
+
+@keyframes reverse-shake {
+ 0% { transform: rotate(180deg) scale(1.8) translateY(20.5%) translateX(14%); }
+ 25% { transform: rotate(200deg) scale(1.8) translateY(20.5%) translateX(14%); }
+ 50% { transform: rotate(150deg) scale(1.8) translateY(20.5%) translateX(14%); }
+ 75% { transform: rotate(200deg) scale(1.8) translateY(20.5%) translateX(14%); }
+ 100% { transform: rotate(180deg) scale(1.8) translateY(20.5%) translateX(14%); }
+}
+
+@keyframes shake {
+ 0% { transform: rotate(0deg) scale(1); }
+ 25% { transform: rotate(10deg) scale(1.5); }
+ 50% { transform: rotate(-20deg) scale(1.5); }
+ 75% { transform: rotate(10deg) scale(1.5); }
+ 100% { transform: rotate(0deg) scale(1); }
+}

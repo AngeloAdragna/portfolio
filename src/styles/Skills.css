@@ -1,0 +1,373 @@
+.SkillPage {
+	background-color: var(--color-blue);
+	height: 100vh;
+	justify-content: space-between;
+	flex-direction: column;
+	display: flex;
+	border-top: 1px solid var(--color-grey-x-dark);
+	box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.35); /* Ombre intérieure */
+}
+
+#titleSkillpage{
+	margin-top: -14vh;
+}
+
+#titleSkillpage::after {
+	content: '';
+	position: absolute;
+	bottom: 0vw;
+	left: 43.3vw;
+	width: 0;
+	height: 5.5px; /* Épaisseur de la ligne */
+	background: linear-gradient(45deg, var(--color-grey-xxx-light), var(--color-grey-xx-light), var( --color-grey-light)); /* Utilise la couleur du texte */
+	transition: width 0.5s ease-out; /* Animation fluide */
+}
+  
+#titleSkillpage:hover::after {
+	width: 13.4vw; /* La ligne s'étend sur toute la largeur */
+}
+
+.profile-skills {
+	margin-bottom: -8vh;
+	width: 99vw;
+	gap: 7vw;
+	flex-direction: row;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-skills > div {
+	width: 33vw;
+}
+
+ul.skills {
+	position: relative;
+	padding: 25px 35px;
+	background: linear-gradient(0deg, var(--color-grey-dark) 0 10px,	var(--color-grey-xx-light) 0 calc(100% - 10px), var(--color-grey-dark) 0 100%);
+	box-shadow: 3px 6px 8px var(--color-grey-xx-dark);
+	border-radius:0 0 40px 40px;
+}
+
+ul.skills:before {
+	font-family:  'Boska-MediumItalic', 'ClashGrotesk-Regular',Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	content: "Languages";
+	line-height: 27px;
+	position: absolute;
+	top: -85px;
+	height: 58px;
+	color: var(--color-grey-dark);
+	background-color: var(--color-grey-xx-light);
+	width: 100%;
+	left: 0;
+	padding: 9px 19px 0 0;
+	text-align: end;
+	z-index: 1;
+	transition: var(--t1);
+	font-size: 49px;
+	transform: scaleY(1.65);
+	border-radius: 40px 40px 0 0;
+	border-top: 5px solid var(--color-grey-base);
+	border-bottom: 5px solid var(--color-grey-dark);
+	border-left: 7px solid var(--color-grey-base);
+	border-right: 7px solid var(--color-grey-base);
+	box-shadow: 3px 2px 6px var(--color-grey-xx-dark);
+}
+
+ul.skills2:before {
+	content: "Technical Skills";
+	line-height: 32px;
+}
+
+ul.skills3:before {
+	content: "Web Dev";
+	line-height: 32px;
+	
+}
+
+ul.skills:after {
+	content: "";
+	position: absolute;
+	border: 40px solid #fff0;
+	border-top-color: var(--color-grey-xx-light);
+	top: -40px;
+	top: -26px;
+	left: 30px;
+	z-index: 1;
+	transition: var(--t1);
+	filter: drop-shadow(0 11px 0.1px var(--color-grey-dark));
+}
+
+ul.skills:hover:before,
+label:hover + ul.skills:before,
+input:checked + label + ul.skills:before {
+	transition: var(--t1);
+	background-color: var(--color-purple-light);
+	background-position: 0 50%;
+}
+ul.skills:hover:after,
+label:hover + ul.skills:after,
+input:checked + label + ul.skills:after {
+	top: -18px;
+	transition: var(--t1);
+	border-top-color: var(--color-purple-light);
+}
+
+ul.skills2:hover:before,
+label:hover + ul.skills2:before,
+input:checked + label + ul.skills2:before {
+	background-color:var(--color-green-light);
+}
+ul.skills2:hover:after,
+label:hover + ul.skills2:after,
+input:checked + label + ul.skills2:after {
+	border-top-color:var(--color-green-light);
+}
+
+ul.skills3:hover:before,
+label:hover + ul.skills3:before,
+input:checked + label + ul.skills3:before {
+	background-color: var(--color-pink-light);
+}
+ul.skills3:hover:after,
+label:hover + ul.skills3:after,
+input:checked + label + ul.skills3:after {
+	border-top-color: var(--color-pink-light);
+}
+
+ul.skills li {
+	--per: 50;
+	--dur: calc(calc(var(--per) / 100) * 1.5s);
+	margin: 0 0 5px 0;
+	list-style: none;
+	padding: 20px 0;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 15px;
+	color: var(--color-grey-xx-dark);
+}
+
+ul.skills li:before {
+	content: "";
+	position: absolute;
+	background: #1c1c1c;
+	height: 16px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	border-radius: 2px;
+	border: 1px solid var(--color-grey-xx-dark);
+	border-color: var(--color-grey-xx-dark);
+	--track:  var(--color-blue-light);
+	background: linear-gradient(
+		90deg,
+		var(--track) calc(calc(var(--per) * 1%) + 4px),
+		#1c1c1c calc(calc(var(--per) * 1%) + 4px)
+	);
+}
+
+
+
+ul.skills li:after {
+	content: "";
+	height: 11px;
+	margin: 0 0 2px 0;
+	background: var(--color-purple-light);
+	position: absolute;
+	box-shadow: 0px 0px 10px 1px var(--color-purple-light);
+	left: 3px;
+	width: 0%;
+	bottom: 0;
+	transition: all var(--dur) ease 0s;
+	animation: start 1s ease 0s 2 alternate;
+}
+
+ul.skills2 li:after {
+	background:var(--color-green-light);
+	box-shadow: 0px 0px 10px 1px var(--color-green-light);
+}
+
+ul.skills3 li:after {
+	background: var(--color-pink-light);
+	box-shadow: 0px 0px 10px 1px var(--color-pink-light);
+}
+
+ul.skills li:hover {
+	filter: brightness(1.4);
+	transition: var(--t1);
+}
+
+ul.skills:hover li:after,
+label:hover + ul.skills li:after,
+input:checked + label + ul.skills li:after {
+	width: calc(calc(var(--per) * 1%) - 2px);
+}
+
+@keyframes start {
+	100% {
+		width: calc(calc(var(--per) * 1%) - 2px);
+	}
+}
+
+ul.skills2 li:after {
+	animation-delay: 0.5s;
+}
+ul.skills3 li:after {
+	animation-delay: 1s;
+}
+
+ul.skills li span {
+	font-weight: 500;
+}
+
+ul.skills li span:before {
+	position: absolute;
+	right: -25px;
+	top: 47.5px;
+	transition: var(--t1);
+	content: "";
+	opacity: 1;
+	border: 7px solid #fff0;
+}
+
+ul.skills li:hover span:before,
+.profile-skills input:checked + label + ul.skills li span:before {
+	transition: var(--t1);
+	right: calc(calc(calc(100 - var(--per)) * 1%) - 12px);
+	opacity: 1;
+	border-right-color: var(--color-purple-light);
+}
+
+ul.skills2 li:hover span:before,
+.profile-skills input:checked + label + ul.skills2 li span:before {
+	border-right-color:var(--color-green-light);
+}
+
+ul.skills3 li:hover span:before,
+.profile-skills input:checked + label + ul.skills3 li span:before {
+	border-right-color: var(--color-pink-light);
+}
+
+ul.skills li span:after {
+	position: absolute;
+	right: -40px;
+	top: 38px;
+	transition: var(--t1);
+	counter-reset: percent var(--per);
+	/*content: counter(percent) "%";*/
+	content: counter(percent);
+	color: var(--color-grey-xx-light);
+	opacity: 1 !important;
+	padding: 4px 6px;
+	border-radius: 1px;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+ul.skills li:hover span:after,
+.profile-skills input:checked + label + ul.skills li span:after {
+	transition: var(--t1);
+	right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
+	position: absolute;
+	opacity: 1;
+	background: var(--color-purple-dark);
+}
+
+ul.skills2 li:hover span:after {
+	background: var(--color-green);
+}
+
+ul.skills3 li:hover span:after {
+	background: var(--color-pink);
+}
+
+/*********************/
+/*** SKILLS VALUES ***/
+/*********************/
+
+ul.skills li.sk-cpp { --per: 85; }
+ul.skills li.sk-jav { --per: 72; }
+ul.skills li.sk-att { --per: 40; }
+ul.skills li.sk-jsc { --per: 70; }
+ul.skills li.sk-rrr { --per: 30; }
+ul.skills li.sk-pyt { --per: 80; }
+
+ul.skills li.sk-pro { --per: 90; }
+ul.skills li.sk-mod { --per: 76; }
+ul.skills li.sk-iaa { --per: 50; }
+ul.skills li.sk-dis { --per: 72; }
+ul.skills li.sk-alg { --per: 85; }
+ul.skills li.sk-sys { --per: 65; }
+
+ul.skills li.sk-css { --per: 80; }
+ul.skills li.sk-php { --per: 63; }
+ul.skills li.sk-sql { --per: 52; }
+ul.skills li.sk-htm { --per: 89; }
+ul.skills li.sk-nod { --per: 30; }
+ul.skills li.sk-rct { --per: 70; }
+
+
+
+
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+
+@media only screen and (max-width: 1024px) {
+	.content { height: 60vh; }
+	.profile-skills {
+		flex-direction: row;
+    flex-wrap: wrap;
+		top: 20px;
+	}
+	.profile-skills > div {
+		width: 47% !important;
+	}
+	.profile-skills > div:nth-child(3) {
+		width: 98% !important;
+		margin-top: 120px;
+	}
+}
+
+
+/*** Mobile view disabled to get (almost) the desired thumbnail ***/
+/*** Uncomment below code to add the media query for mobile view ***/
+
+/*
+@media only screen and (max-width: 768px) {
+	.content { height: 60vh; }
+	.profile-skills {
+		flex-direction: row;
+    flex-wrap: wrap;
+		top: 20px;
+	}
+	.profile-skills > div {
+		width: 98% !important;
+	}
+	.profile-skills > div:nth-child(2), 
+	.profile-skills > div:nth-child(3) {
+		margin-top: 120px;
+	}
+	ul.skills li:after {
+		width: calc(calc(var(--per) * 1%) - 2px);
+	}
+	ul.skills li span:before {
+		transition: var(--t1);
+		right: calc(calc(96.5 - var(--per)) * 1%);
+		opacity: 1;
+		border-right-color: var(  --color-purple-light);
+	}
+	ul.skills2 li span:before {
+		border-right-color:var(  --color-purple-light);
+	}
+	ul.skills3 li span:before {
+		border-right-color: var(  --color-green-light);
+	}
+	ul.skills li span:after {
+		transition: var(--t1);
+		right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
+		opacity: 1;
+		background: var(--color-grey-base);
+	}
+}
+*/
