@@ -15,7 +15,7 @@ Ce projet est mon portfolio réalisé avec React.js et Vue. Il regroupe mon parc
 
 ## Mode d'emploi
 **Accès :**  
-https://portfolio-angelo-adragna-dev.vercel.app/
+https://portfolio-angelo-adragna-dev.vercel.app
 
 
 
