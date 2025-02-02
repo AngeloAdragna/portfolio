@@ -8,8 +8,9 @@
 # Présentation
 
 ## Description
-Ce projet est mon portfolio réalisé avec React.js et Vue. Il regroupe mon parcours scolaire, mes compétences, et mes différents projets. Une courte présentation, mon cv et mes contacts y sont également disponibles.
-### Prérequis
+Ce projet est mon portfolio réalisé avec React.js et Vue. Il regroupe mon parcours scolaire, mes compétences, et mes différents projets. Une courte présentation, mon cv et mes contacts y sont également disponibles.  
+
+## Prérequis
 - **Navigateurs :**
 
 # Mode d'emploi
