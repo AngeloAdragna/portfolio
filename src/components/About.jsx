@@ -26,13 +26,13 @@ function About() {
 
     return (
 
-        <section ref={SectionAbout} id="about">
-            <h2 className='TitlePage' id='TitleAboutPage' >About me</h2>
+        <section ref={SectionAbout} id="about" className='page'>
+            <h2 className='TitlePage'>About me</h2>
             <div className="container">
                 <div>
                     <img id='imgWeb' src="/website-development.svg" alt="" />
                 </div>
-                <div style={{ opacity: progress }} id='divAbout' >
+                <div style={{ opacity: progress }} id='divAboutText' >
                     <p>
                         Actuellement étudiant en troisième année de licence en informatique, je suis également inscrit dans le cursus CMI Informatique (Cursus Master Ingénierie) au CERI (Centre d’Enseignement et de Recherche en Informatique) d’Avignon.
                         Ce double cursus exigeant me permet de consolider mes compétences tout en explorant des domaines tels que l’intelligence artificielle, la gestion et l’économie d’entreprise.

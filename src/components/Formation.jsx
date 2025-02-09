@@ -28,7 +28,7 @@ function Formation() {
     return (
 
         <section ref={sectionRef} id="formation">
-            <h2 className='TitlePage' id='titleFormationpage'>Formation</h2>
+            <h2 className='TitlePage'>Formation</h2>
             <div className="textAppear" id='M2' style={{ opacity: progress - 0.4 }}>
                 <p> Master 2 en Informatique</p>
                 <p> 2026 - 2027 </p>

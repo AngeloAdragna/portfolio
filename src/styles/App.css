@@ -44,15 +44,17 @@
 
 body {
   margin: 0;
-  font-family: 'ClashGrotesk-Regular', 'Boska-Medium', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'ClashGrotesk-Regular', 'Boska-Medium', 'Roboto', 'Arial', sans-serif;
   line-height: 1.5;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .App {
@@ -60,17 +62,67 @@ body {
 }
 
 
+/*bar defilement */
+
+/* Personnalisation du style de la barre de défilement */
+::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+}
+
+/* Personnalisation du fond de la barre de défilement */
+::-webkit-scrollbar-track {
+  background: var(--color-blue);
+}
+
+/* Personnalisation de la partie mobile de la barre de défilement */
+::-webkit-scrollbar-thumb {
+  background: var(--color-blue-light); /* Couleur de la partie mobile */
+  border-radius: 10px; /* Arrondi des bords */
+}
+
+/* Personnalisation lorsque la barre est survolée */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-purple-dark); /* Couleur de la partie mobile */
+}
+
+
+
+
+/*Title page*/
 .TitlePage{
   color: var(--color-grey-xxxx-light);
   filter: brightness(1.1);
   font-family:  'Boska-Bold', 'ClashGrotesk-Regular',Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 3em;
+  font-size: clamp(0.2rem, 3vw, 3rem);
   font-weight: bold;
   underline: solid;
-  margin-top: -1vw;
-  margin-bottom: 1.5em;
   text-shadow: -3px 4px 8px rgba(0, 0, 0, 1);
-  padding-left: 0.3em;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.TitlePage::after {
+  content: '';
+  position: absolute;
+  bottom: 0vw;
+  left: 0vw;
+  width: 0;
+  height: 5px; /* Épaisseur de la ligne */
+  background: linear-gradient(45deg, var(--color-grey-xxx-light), var(--color-grey-xx-light), var( --color-grey-light)); /* Utilise la couleur du texte */
+  transition: width 0.5s ease-out; /* Animation fluide */
+}
+
+.TitlePage:hover::after {
+  width: 100%; /* La ligne s'étend sur toute la largeur */
+}
+
+.page{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .container{

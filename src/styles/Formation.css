@@ -5,26 +5,6 @@
   border-top: 1px solid var(--color-blue);
   box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.4); /* Ombre intérieure */
   background-color: var( --color-purple);
-  filter: brightness(1.05);
-}
-
-#titleFormationpage{
-	margin-top: 5vh;
-}
-
-#titleFormationpage::after {
-	content: '';
-	position: absolute;
-	bottom: 0vw;
-	left: 44.25vw;
-	width: 0;
-	height: 5.5px; /* Épaisseur de la ligne */
-  background: linear-gradient(45deg, var(--color-grey-xxx-light), var(--color-grey-xx-light), var( --color-grey-light)); /* Utilise la couleur du texte */
-  transition: width 0.5s ease-out; /* Animation fluide */
-}
-  
-#titleFormationpage:hover::after {
-	width: 11.5vw; /* La ligne s'étend sur toute la largeur */
 }
 
 
@@ -36,9 +16,9 @@
   width: 16vw;
   height: 11vw;
   background-color: var(--color-grey-light);
-  box-shadow: 1.5px 6px 2px var( --color-grey-xx-dark);
-  border-top: 10px solid var(--color-grey-dark);
-  border-bottom: 10px solid var(--color-grey-dark);
+  box-shadow: 1.5px 6px 4px var(--color-grey-xx-dark);
+  border-top: 5px solid var(--color-grey-dark);
+  border-bottom: 5px solid var(--color-grey-dark);
   z-index: 1;
 }
 
@@ -54,40 +34,48 @@
   left: -32.2vw; /* Départ hors de l'écran à gauche */
   border-top: 8vw solid transparent;
   border-bottom: 8vw solid transparent;
-  border-left: 12vw solid var(--color-grey-x-dark);
+  border-left: 12vw solid var(--color-grey-xx-dark);
   z-index: 2;
 }
 #triangle:before {
+  position: absolute;
+  left: -11.9vw;
+  top: -7.7vw;
+  border-top: 7.5vw solid transparent;
+  border-bottom: 7.5vw solid transparent;
+  border-left: 11.3vw solid var(--color-grey);
+  z-index: 1;
+}
+#triangle:after {
   position: absolute;
   left: -12.2vw;
   top: -8.2vw;
   border-top: 8vw solid transparent;
   border-bottom: 8vw solid transparent;
-  border-left: 12vw solid var(  --color-grey-base);
+  border-left: 12vw solid var(--color-grey-dark);
   z-index: 0;
 }
 
 .openable {
   overflow: hidden;
- }
+}
+
 .openable:hover {
   height: 30vw;
   transition: height 1s ease-out, font-size 1s ease-in-out ; /* Synchronisation du conteneur */
   font-size: calc(1.4px + 1vmin);
 }
 #square5:hover {
-  transition: height 1s ease-out, font-size 1s ease-in-out ; /* Synchronisation du conteneur */
   font-size: calc(2.1px + 1vmin);
 }
 #square3:hover {
-  transition: height 1s ease-out, font-size 1s ease-in-out ; /* Synchronisation du conteneur */
   font-size: calc(3.3px + 1vmin);
 }
 
 .objectMoving {
   position: absolute;
   top: 30vh;
-   transition: height 1s ease-out, font-size 1s ease-in-out ; /* Synchronisation du conteneur */
+  transition: height 1s ease-out, font-size 1s ease-in-out ; /* Synchronisation du conteneur */
 
 }
 

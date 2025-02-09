@@ -1,4 +1,4 @@
-.projet {
+#project {
   background-color: var(--color-blue);
   min-height: 100vh;
   justify-content: center;
@@ -7,27 +7,6 @@
   display: flex;
   border-top: 1px solid var(--color-purple);
   box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.4);
-}
-
-
-#titleProjectPage{
-  margin-top: -14vh;
-  margin-bottom: 17vh;
-}
-
-#titleProjectPage::after {
-	content: '';
-	position: absolute;
-	bottom: 0vw;
-	left: 0.6vw;
-	width: 0;
-	height: 5.5px;
-  background: linear-gradient(45deg, var(--color-grey-xxx-light), var(--color-grey-x-light), var( --color-grey-light)); /* Utilise la couleur du texte */
-  transition: width 0.5s ease-out;
-}
-  
-#titleProjectPage:hover::after {
-	width: 8vw;
 }
 
 .caroussel{

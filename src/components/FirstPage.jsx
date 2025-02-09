@@ -36,7 +36,7 @@ function FirstPage() {
     }, [username]);
 
     return (
-        <section className="firstPage">
+        <section>
             <header>
                 <div className="bg">
                     <VantaBackground />
@@ -65,7 +65,7 @@ function FirstPage() {
                             </Link>
                         </li>
                         <li className="linkicone">
-                            <Link to="projet" smooth={true} duration={1000}>
+                            <Link to="project" smooth={true} duration={1000}>
                                 <FiGithub />
                             </Link>
                         </li>

@@ -4,12 +4,11 @@ import '../styles/Skills.css';
 function Skills() {
 
     return (
-        <section id="SkillPage" className="SkillPage">
-            <h2 className='TitlePage' id="titleSkillpage">Competence</h2>
+        <section id="SkillPage" className='page'>
+            <h2 className='TitlePage'>Competence</h2>
 
             <div className="profile-skills">
                 <div>
-
                     <ul className="skills skills1">
                         <li className="sk-cpp"><span>C&nbsp;++</span></li>
                         <li className="sk-jav"><span>Java</span></li>
@@ -46,7 +45,6 @@ function Skills() {
                     </ul>
                 </div>
             </div>
-
         </section >
 
     );

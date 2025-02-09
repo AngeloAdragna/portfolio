@@ -24,8 +24,8 @@ function Projet() {
         slidesToScroll: 1,
     };
     return (
-        <section id="projet" className="projet">
-            <h2 className='TitlePage' id='titleProjectPage'>Project</h2>
+        <section id="project" className="page">
+            <h2 className='TitlePage'>Project</h2>
             <section className='caroussel'>
                 {repos.length > 0 ? (
                     <Slider {...settings}>
