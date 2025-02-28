@@ -61,7 +61,7 @@ function Contact() {
                             <IoMailOutline className='iconContactPage' /> angelo.adragnadev@gmail.com
                         </a>
                     </li>
-                    <li style={{ transform: `translateY(${progress * 5}em)`, opacity: progress }} className='elemListContact'><a href="/CV_Angelo_Adragna_2024.pdf" download="CV_Angelo_Adragna_2024.pdf"><SiReaddotcv className='iconContactPage' /> Curriculum vitae</a></li>
+                    <li style={{ transform: `translateY(${progress * 5}em)`, opacity: progress }} className='elemListContact'><a href="/CV_Angelo_Adragna_2025.pdf" download="CV_Angelo_Adragna_2025.pdf"><SiReaddotcv className='iconContactPage' /> Curriculum vitae</a></li>
                 </ul>
 
 
