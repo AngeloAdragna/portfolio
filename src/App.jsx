@@ -35,7 +35,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.6 } // Détecte quand 60% d'une section est visible
+      { threshold: 0.7 } // Détecte quand 60% d'une section est visible
     );
 
     sectionsRef.current.forEach((section) => {
@@ -45,23 +45,28 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
+useEffect(() => {
     const handleScroll = (event) => {
-      event.preventDefault();
-      let newIndex = activeIndex;
+        event.preventDefault();
+        let newIndex = activeIndex;
 
-      if (event.deltaY > 0 && activeIndex < sectionsRef.current.length - 1) {
-        newIndex = activeIndex + 1;
-      } else if (event.deltaY < 0 && activeIndex > 0) {
-        newIndex = activeIndex - 1;
-      }
+        const SCROLL_THRESHOLD = 45;  // ajustez cette valeur pour réguler la sensibilité
 
-      sectionsRef.current[newIndex]?.scrollIntoView({ behavior: "smooth" });
+        if (Math.abs(event.deltaY) > SCROLL_THRESHOLD) {
+            if (event.deltaY > 0 && activeIndex < sectionsRef.current.length - 1) {
+                newIndex = activeIndex + 1;
+            } else if (event.deltaY < 0 && activeIndex > 0) {
+                newIndex = activeIndex - 1;
+            }
+
+            sectionsRef.current[newIndex]?.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     window.addEventListener("wheel", handleScroll, { passive: false });
     return () => window.removeEventListener("wheel", handleScroll);
-  }, [activeIndex]);
+}, [activeIndex]);
+
 
   return (
     <div className="App">

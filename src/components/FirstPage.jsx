@@ -24,7 +24,7 @@ function FirstPage() {
     }, [username]);
 
     return (
-        <section>
+        <section id="firstPage">
             <header>
                 {/* Background with VantaBackground component */}
                 <div className="bg">

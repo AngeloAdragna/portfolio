@@ -20,32 +20,32 @@ const SideBar = () => {
     return <section className={`bar ${isCollapsed ? 'collapsed' : ''}`}>
             <ul className={`list_bar ${isCollapsed ? 'collapsed' : ''}`}>
                 <li className="linkicone">
-                    <Link to="firstPage" smooth={true} duration={1000}>
+                    <Link to="firstPage" smooth={true} duration={500}>
                         <HiOutlineHome />
                     </Link>
                 </li>
                 <li className="linkicone">
-                    <Link to="about" smooth={true} duration={1000}>
+                    <Link to="about" smooth={true} duration={500}>
                         <GoPerson />
                     </Link>
                 </li>
                 <li className="linkicone">
-                    <Link to="SkillPage" smooth={true} duration={1000}>
+                    <Link to="SkillPage" smooth={true} duration={500}>
                         <GiHistogram />
                     </Link>
                 </li>
                 <li className="linkicone">
-                    <Link to="formation" smooth={true} duration={1000}>
+                    <Link to="formation" smooth={true} duration={500}>
                         <IoSchoolOutline />
                     </Link>
                 </li>
                 <li className="linkicone">
-                    <Link to="project" smooth={true} duration={1000}>
+                    <Link to="project" smooth={true} duration={500}>
                         <FiGithub />
                     </Link>
                 </li>
                 <li className="linkicone">
-                    <Link to="contact" smooth={true} duration={1000}>
+                    <Link to="contact" smooth={true} duration={500}>
                         <IoMailOutline />
                     </Link>
                 </li>
