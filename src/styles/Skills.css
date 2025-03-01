@@ -8,7 +8,7 @@
 }
 
 .profile-skills {
-	margin-bottom: -8vh;
+	margin-bottom: -20vh;
 	width: 99vw;
 	gap: 7vw;
 	flex-direction: row;
@@ -32,21 +32,19 @@ ul.skills {
 ul.skills:before {
 	font-family:  'Boska-MediumItalic', 'ClashGrotesk-Regular',Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	content: "Languages";
-	line-height: 27px;
+	line-height: 120%;
+	font-size: calc(2.0em);
 	position: absolute;
-	top: -85px;
-	height: 58px;
-	color: var(--color-grey-dark);
-	background-color: var(--color-grey-xx-light);
+	top: -20.2%;
 	width: 100%;
 	left: 0;
-	padding: 9px 19px 0 0;
+	color: var(--color-grey-dark);
+	background-color: var(--color-grey-xx-light);
+	padding: 0px 7% 0 0;
 	text-align: end;
-	z-index: 1;
 	transition: var(--t1);
-	font-size: 49px;
 	transform: scaleY(1.65);
-	border-radius: 40px 40px 0 0;
+	border-radius: 35px 35px 0 0;
 	border-top: 5px solid var(--color-grey-base);
 	border-bottom: 5px solid var(--color-grey-dark);
 	border-left: 7px solid var(--color-grey-base);
@@ -56,13 +54,10 @@ ul.skills:before {
 
 ul.skills2:before {
 	content: "Technical Skills";
-	line-height: 32px;
 }
 
 ul.skills3:before {
-	content: "Web Dev";
-	line-height: 32px;
-	
+	content: "Web Dev";	
 }
 
 ul.skills:after {
@@ -70,9 +65,8 @@ ul.skills:after {
 	position: absolute;
 	border: 40px solid #fff0;
 	border-top-color: var(--color-grey-xx-light);
-	top: -40px;
-	top: -26px;
-	left: 30px;
+	top: -7.1%;
+	left: 10%;
 	z-index: 1;
 	transition: var(--t1);
 	filter: drop-shadow(0 11px 0.1px var(--color-grey-dark));
@@ -88,7 +82,7 @@ input:checked + label + ul.skills:before {
 ul.skills:hover:after,
 label:hover + ul.skills:after,
 input:checked + label + ul.skills:after {
-	top: -18px;
+	top: -5%;
 	transition: var(--t1);
 	border-top-color: var(--color-purple-light);
 }
@@ -118,12 +112,11 @@ input:checked + label + ul.skills3:after {
 ul.skills li {
 	--per: 50;
 	--dur: calc(calc(var(--per) / 100) * 1.5s);
-	margin: 0 0 5px 0;
 	list-style: none;
-	padding: 20px 0;
+	padding: 1.1vw 0;
 	position: relative;
 	text-transform: uppercase;
-	font-size: 15px;
+	font-size: calc(0.9rem);
 	color: var(--color-grey-xx-dark);
 }
 
@@ -135,14 +128,14 @@ ul.skills li:before {
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	border-radius: 2px;
-	border: 1px solid var(--color-grey-xx-dark);
-	border-color: var(--color-grey-xx-dark);
+	border-radius: 5px;
+	border: 1.2px solid var(--color-grey-xx-dark);
 	--track:  var(--color-blue-light);
+
 	background: linear-gradient(
 		90deg,
 		var(--track) calc(calc(var(--per) * 1%) + 4px),
-		#1c1c1c calc(calc(var(--per) * 1%) + 4px)
+		var(--color-blue-dark) calc(calc(var(--per) * 1%) + 4px)
 	);
 }
 
@@ -150,12 +143,13 @@ ul.skills li:before {
 
 ul.skills li:after {
 	content: "";
-	height: 11px;
-	margin: 0 0 2px 0;
+	height: 14px;
+	margin: 0 0 0.75px 0;
 	background: var(--color-purple-light);
 	position: absolute;
+	border-radius: 4px;
 	box-shadow: 0px 0px 10px 1px var(--color-purple-light);
-	left: 3px;
+	left: 1px;
 	width: 0%;
 	bottom: 0;
 	transition: all var(--dur) ease 0s;
@@ -180,12 +174,12 @@ ul.skills li:hover {
 ul.skills:hover li:after,
 label:hover + ul.skills li:after,
 input:checked + label + ul.skills li:after {
-	width: calc(calc(var(--per) * 1%) - 2px);
+	width: calc(calc(var(--per) * 1%) + 2px);
 }
 
 @keyframes start {
 	100% {
-		width: calc(calc(var(--per) * 1%) - 2px);
+		width: calc(calc(var(--per) * 1%) + 2px);
 	}
 }
 
@@ -196,24 +190,20 @@ ul.skills3 li:after {
 	animation-delay: 1s;
 }
 
-ul.skills li span {
-	font-weight: 500;
-}
-
 ul.skills li span:before {
 	position: absolute;
-	right: -25px;
-	top: 47.5px;
+	right: -15%;
+	top: 70%;
 	transition: var(--t1);
 	content: "";
 	opacity: 1;
-	border: 7px solid #fff0;
+	border: 8px solid #fff0;
 }
 
 ul.skills li:hover span:before,
 .profile-skills input:checked + label + ul.skills li span:before {
 	transition: var(--t1);
-	right: calc(calc(calc(100 - var(--per)) * 1%) - 12px);
+	right: calc(calc(calc(100 - var(--per)) * 1%) - 13px);
 	opacity: 1;
 	border-right-color: var(--color-purple-light);
 }
@@ -230,8 +220,8 @@ ul.skills3 li:hover span:before,
 
 ul.skills li span:after {
 	position: absolute;
-	right: -40px;
-	top: 38px;
+	right: -30px;
+	top: 58%;
 	transition: var(--t1);
 	counter-reset: percent var(--per);
 	/*content: counter(percent) "%";*/
@@ -239,7 +229,7 @@ ul.skills li span:after {
 	color: var(--color-grey-xx-light);
 	opacity: 1 !important;
 	padding: 4px 6px;
-	border-radius: 1px;
+	border-radius: 5px;
 	font-weight: bold;
 	pointer-events: none;
 }
@@ -294,60 +284,61 @@ ul.skills li.sk-rct { --per: 70; }
 /*********************/
 
 @media only screen and (max-width: 1024px) {
-	.content { height: 60vh; }
 	.profile-skills {
-		flex-direction: row;
-    flex-wrap: wrap;
-		top: 20px;
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: -10vh;
+		width: 99vw;
+		gap: 10vw;
 	}
 	.profile-skills > div {
-		width: 47% !important;
+		width: 50vw;
 	}
-	.profile-skills > div:nth-child(3) {
-		width: 98% !important;
-		margin-top: 120px;
+	ul.skills:before {
+		font-size: calc(1.8em);
+		top: -21%;
+		padding: 0px 7% 0 0;
+		transform: scaleY(1.65);
+	}
+	ul.skills li {
+		padding: 0.4rem 0 0.8rem 0;
+		position: relative;
+		text-transform: uppercase;
+		font-size: calc(1rem);
+		color: var(--color-grey-xx-dark);
 	}
 }
 
-
-/*** Mobile view disabled to get (almost) the desired thumbnail ***/
-/*** Uncomment below code to add the media query for mobile view ***/
-
-/*
 @media only screen and (max-width: 768px) {
-	.content { height: 60vh; }
 	.profile-skills {
-		flex-direction: row;
-    flex-wrap: wrap;
-		top: 20px;
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: -10vh;
+		width: 99vw;
+		gap: 10vw;
 	}
 	.profile-skills > div {
-		width: 98% !important;
+		width: 80vw;
 	}
-	.profile-skills > div:nth-child(2), 
-	.profile-skills > div:nth-child(3) {
-		margin-top: 120px;
+	ul.skills {
+		padding: 18px 35px;
 	}
-	ul.skills li:after {
-		width: calc(calc(var(--per) * 1%) - 2px);
+	ul.skills:before {
+		font-size: calc(1.5em);
+		top: -21%;
+		padding: 0px 7% 0 0;
+		transform: scaleY(1.50);
 	}
-	ul.skills li span:before {
-		transition: var(--t1);
-		right: calc(calc(96.5 - var(--per)) * 1%);
-		opacity: 1;
-		border-right-color: var(  --color-purple-light);
-	}
-	ul.skills2 li span:before {
-		border-right-color:var(  --color-purple-light);
-	}
-	ul.skills3 li span:before {
-		border-right-color: var(  --color-green-light);
-	}
-	ul.skills li span:after {
-		transition: var(--t1);
-		right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
-		opacity: 1;
-		background: var(--color-grey-base);
+	ul.skills li {
+		padding: 0rem 0 0.9rem 0;
+		position: relative;
+		text-transform: uppercase;
+		font-size: calc(0.7rem);
+		color: var(--color-grey-xx-dark);
 	}
 }
-*/
+

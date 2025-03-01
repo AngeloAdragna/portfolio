@@ -17,8 +17,8 @@
 #divContact{
   width: 49vw;
   list-style-type: none;
-  font-size: 2em;
-color: white; /* couleur des liens */
+  font-size: 2rem;
+  color: white; /* couleur des liens */
 }
 
 #divContact a {

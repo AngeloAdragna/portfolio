@@ -29,7 +29,7 @@
 }
 
 .titleCard {
-  font-size: 2.0em;
+  font-size: max-content;
   font-weight: bold;
   color: var(--color-grey-x-dark);
   padding: 0 5px 10px 0;
@@ -38,7 +38,7 @@
 }
 
 .textCard {
-  font-size: 1.8em;
+  font-size: 1em;
   color: var(--color-grey-dark);
   text-align: center;
   padding: 25px;

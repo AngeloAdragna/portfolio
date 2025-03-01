@@ -10,7 +10,7 @@
 
 .square{
   color: var( --color-grey-xx-dark);
-  font-size: calc(3.5px + 1vmin);
+  font-size: calc(0.55rem);
   margin-top: 2.8vw;
   left: -48vw; /* Départ hors de l'écran à gauche */
   width: 16vw;
@@ -54,22 +54,24 @@
   border-bottom: 8vw solid transparent;
   border-left: 12vw solid var(--color-grey-dark);
   z-index: 0;
+
 }
 
 .openable {
   overflow: hidden;
+
 }
 
 .openable:hover {
   height: 30vw;
   transition: height 1s ease-out, font-size 1s ease-in-out ; /* Synchronisation du conteneur */
-  font-size: calc(1.4px + 1vmin);
+  font-size: calc(0.45rem);
 }
 #square5:hover {
-  font-size: calc(2.1px + 1vmin);
+  font-size: calc(0.481rem);
 }
 #square3:hover {
-  font-size: calc(3.3px + 1vmin);
+  font-size: calc(0.53rem);
 }
 
 .objectMoving {
@@ -102,6 +104,7 @@
   position: absolute;
   transition: opacity 0.5s ease-out;
   top: 19vh;
+  font-size: calc(0.7rem);
 }
 
 #L1{
