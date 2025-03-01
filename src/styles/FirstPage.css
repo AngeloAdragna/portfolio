@@ -17,8 +17,20 @@ Header {
   z-index: 1;
   padding-right: 2%; 
   font-family: 'ClashGrotesk-Medium','Boska-Medium';
-  font-size: calc(9px + 8vmin);
+  font-size: calc(1.5rem + 2.5vw);
+
   text-shadow: -4px 5px 6px rgba(33, 36, 25, 1);
   color: var(  --color-grey-xx-light);
   filter: brightness(1.1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 780px) {
+  Header{
+    justify-content: center;
+    align-items: center;
+  }
+  .App-header{
+    font-size: calc(1.5rem + 2vw);
+  }
 }
