@@ -26,7 +26,6 @@ function Formation() {
     }, []);
 
     return (
-
         <section ref={sectionRef} id="formation">
             <h2 className='TitlePage'>Formation</h2>
             <div className="textAppear" id='M2' style={{ opacity: progress - 0.4 }}>
@@ -51,21 +50,21 @@ function Formation() {
             </div>
 
             <div className="objectMoving" id="triangle"
-                style={{
-                    transform: `translateX(${progress * 118}vw)`,
+                 style={{
+                    transform: window.innerWidth <= 1024 ? `translateY(${progress * 82}vh)` : `translateX(${progress * 118}vw)`,
                 }}>
             </div>
 
             <div className="objectMoving square" id='square1'
                 style={{
-                    transform: `translateX(${progress * 118}vw)`,
+                    transform: window.innerWidth <= 1024 ? `translateY(${progress * 68}vh)` : `translateX(${progress * 118}vw)`,
                 }}>
                 <p>Soon</p>
             </div>
 
             <div className="objectMoving square" id='square2'
                 style={{
-                    transform: `translateX(${progress * 102}vw)`,
+                    transform: window.innerWidth <= 1024 ? `translateY(${progress * 54}vh)` : `translateX(${progress * 102}vw)`,
                 }}>
                 <p>Soon</p>
             </div>
@@ -73,7 +72,7 @@ function Formation() {
             <div
                 className="objectMoving square openable" id='square3'
                 style={{
-                    transform: `translateX(${progress * 86}vw)`,
+                    transform: window.innerWidth <= 1024 ? `translateY(${progress * 40}vh)` : `translateX(${progress * 86}vw)`,
                 }}>
                 <p className='titleInArrow'>S5 - Univesité de Montréal</p>
                 <p className='textAppearInArrow'>Fondements de l'apprentissage machine.&nbsp;&nbsp;Qualité du logiciel et métriques.&nbsp;&nbsp;Science des données.&nbsp;&nbsp;Infographie.</p>
@@ -89,7 +88,7 @@ function Formation() {
             <div
                 className="objectMoving square openable" id='square4'
                 style={{
-                    transform: `translateX(${progress * 70}vw)`,
+                    transform: window.innerWidth <= 1024 ? `translateY(${progress * 26}vh)` : `translateX(${progress * 70}vw)`,
                 }}>
 
                 <p className='titleInArrow'> S3 - Avignon Université</p>
@@ -104,8 +103,8 @@ function Formation() {
             </div>
 
             <div className="objectMoving square openable" id='square5'
-                style={{
-                    transform: `translateX(calc(${progress * 54}vw - 10px))`,
+                 style={{
+                    transform: window.innerWidth <= 1024 ? `translateY(${progress * 12}vh)` : `translateX(${progress * 54}vw)`,
                 }}>
                 <p className='titleInArrow'>S1 - Avignon Université</p>
                 <p className='textAppearInArrow'>Analyse 1.&nbsp;&nbsp;Algèbre 1.&nbsp;&nbsp;Base de la programmation.&nbsp;&nbsp;Fondement de l'informatique 1.&nbsp;&nbsp;DBWEB 1 : Conception internet.&nbsp;&nbsp;Anglais.&nbsp;&nbsp;Methodologie.</p>
