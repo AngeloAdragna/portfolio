@@ -39,7 +39,6 @@ function Contact() {
         };
     }, []);
     return (
-
         <section ref={SectionContact} id="contact" className="contact">
             <div className="container">
 

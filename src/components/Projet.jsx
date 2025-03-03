@@ -20,9 +20,14 @@ function Projet() {
         infinite: true,
         autoplay: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: window.innerWidth < 768 ? 1 : (window.innerWidth <= 1024 ? 2 : 3),
         slidesToScroll: 1,
     };
+    
+    window.addEventListener('resize', () => {
+        settings.slidesToShow = window.innerWidth <= 768 ? 1 : (window.innerWidth <= 1024 ? 2 : 3);
+        // Si tu as besoin de réinitialiser ton composant ici
+        })
     return (
         <section id="project" className="page">
             <h2 className='TitlePage'>Project</h2>

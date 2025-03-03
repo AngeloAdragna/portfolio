@@ -90,7 +90,7 @@ function Formation() {
                 style={{
                     transform: window.innerWidth <= 1024 ? `translateY(${progress * 26}vh)` : `translateX(${progress * 70}vw)`,
                 }}>
-
+                
                 <p className='titleInArrow'> S3 - Avignon Université</p>
                 <p className='textAppearInArrow'>Programmation linéaire.&nbsp;&nbsp;Théorie des langages et analyse syntaxique.&nbsp;&nbsp;Algorithmie avancée et programmation.&nbsp;&nbsp;Circuits pour systemes embarqués. Base de données.&nbsp;&nbsp;Anglais.</p>
 

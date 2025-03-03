@@ -57,7 +57,6 @@
 
 .openable {
   overflow: hidden;
-
 }
 
 .openable:hover {
@@ -162,7 +161,7 @@
   .square{
     font-size: calc(0.55rem);
     margin-top: 0vw;
-    left: 57vw; /* Départ hors de l'écran à gauche */
+    left: 15vw; /* Départ hors de l'écran à gauche */
     width: 25vw;
     height: 14vh;
     top: 0vh;
@@ -181,7 +180,7 @@
   #triangle {
     position: absolute;
     top: -0.4vh;
-    left: 55.8vw;
+    left: 13.8vw;
     width: 26vw;
     border-left: 14vw solid transparent;
     border-right: 14vw solid transparent;
@@ -191,7 +190,7 @@
   }
   #triangle:before {
     position: absolute;
-    top: -13.8vh;
+    top: -18.5vw;
     left: -12.7vw;
     width: 20vw;
     border-left: 12.4vw solid transparent;
@@ -202,7 +201,7 @@
   }
   #triangle:after {
     position: absolute;
-    top: -14.3vh;
+    top: -19.2vw;
     left: -14vw;
     width: 26vw;
     border-left: 13.7vw solid transparent;
@@ -211,10 +210,58 @@
     border-bottom:none ;
     z-index: 1;
   }
-  
-  .objectMoving {
-    position: absolute;
-    right: 3vw;
-    transition: height 1s ease-out, font-size 1s ease-in-out ; /* Synchronisation du conteneur */
+  .openable:hover {
+    height: 14vh;
+    width: 70vw;
+    transition: width 1s ease-out, font-size 1s ease-in-out ;
+    font-size: calc(0.47rem);
   }
+  #square5:hover {
+    font-size: calc(0.465rem);
+    height: 14vh;
+    width: 70vw;
+    transition: width 1s ease-out, font-size 1s ease-in-out ;
+  }
+  #square3:hover {
+    font-size: calc(0.525rem);
+  }
+    
+  #L1{
+    top: 20vw;
+    left: 60vw;
+  }
+  #L2{
+    top: 38vw;
+    left: 60vw;
+  }
+  #L3{
+    top: 56vw;
+    left: 60vw;
+  }
+  #M1{
+    top: 74vw;;
+    left: 60vw;
+  }
+  #M2{
+    top: 92vw;
+    left: 60vw;
+  }
+      
+      
+  #la1{
+    top: 22vw;
+    left: 5vw;
+    rotate: 270deg;
+  }
+  #la2{
+    top: 40vw;
+    left: 5vw;
+    rotate: 270deg;
+  }
+  #la3{
+    top: 58vw;
+    left: 5vw;
+    rotate: 270deg;
+  }
+
 }
