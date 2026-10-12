@@ -19,6 +19,15 @@ const nav = [
 export default function App() {
   const repos = useRepos();
   const [overLanding, setOverLanding] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Menu mobile : se ferme avec Échap.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
 
   // La barre du haut est transparente tant que la page d'accueil est visible.
   useEffect(() => {
@@ -36,7 +45,7 @@ export default function App() {
     <>
       <a className="skip" href="#bonjour">Aller au contenu</a>
 
-      <header className={`topbar${overLanding ? " is-over" : ""}`}>
+      <header className={`topbar${overLanding && !menuOpen ? " is-over" : ""}${menuOpen ? " is-open" : ""}`}>
         <div className="topbar-inner">
           <a className="brand" href="#top">
             <span className="orb orb-small" aria-hidden="true" />
@@ -50,7 +59,23 @@ export default function App() {
           <a className="btn btn-small" href={cvHref} download>
             <IconDownload /> CV
           </a>
+          <button
+            type="button"
+            className="menu-btn"
+            aria-expanded={menuOpen}
+            aria-controls="menu-mobile"
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <span /><span />
+          </button>
         </div>
+        <nav id="menu-mobile" className="menu-mobile" aria-label="Sections" hidden={!menuOpen}>
+          {nav.map(([id, label]) => (
+            <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{label}</a>
+          ))}
+          <a href="#bonjour" onClick={() => setMenuOpen(false)}>Poser une question</a>
+        </nav>
       </header>
 
       <main>

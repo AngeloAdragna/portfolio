@@ -77,7 +77,7 @@ export default function LinkMap() {
         <h2>Compétences : ce que chaque projet a construit</h2>
         <p className="lead-left">
           Un projet nourrit souvent plusieurs expériences, et chaque expérience débouche sur une compétence
-          transversale. Survolez un projet, une expérience ou un outil pour suivre le fil.
+          transversale. Survolez ou touchez un projet, une expérience ou un outil pour suivre le fil.
         </p>
       </div>
 
@@ -115,6 +115,35 @@ export default function LinkMap() {
           ))}
         </dl>
       </div>
+      {/* Sur téléphone, les courbes n'ont pas la place : chaque expérience devient une carte. */}
+      <ul className="linkmap-mobile">
+        {experiences.map((e) => (
+          <li key={e.id} className={`lmm-card${nodeClass(rel?.exps.has(e.id))}`}>
+            <button type="button" className="lmm-exp" onClick={() => goToSection(`fiche-${e.id}`)}>
+              {e.archetype}
+            </button>
+            <p className="lmm-comp">
+              <span className="muted">Compétence</span> {e.competence.name}
+            </p>
+            <p className="lmm-projects">
+              {e.projects.map((id) => {
+                const p = work.find((w) => w.id === id);
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    className={`chip${rel?.projs.has(id) ? " is-on" : ""}`}
+                    onClick={() => goToSection(`p-${id}`)}
+                  >
+                    {p.title}
+                  </button>
+                );
+              })}
+            </p>
+          </li>
+        ))}
+      </ul>
+
       <div className="linkmap" ref={box} onMouseLeave={() => setFocus(null)}>
         <svg className="linkmap-svg" width={size.w} height={size.h} aria-hidden="true">
           {paths.map((p, i) => (
